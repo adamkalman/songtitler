@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>SongTitler</title>
+  </head>
+  <body>
+    <p>SongTitler will take lyrics as input and output a suggested title for the song.<p>
+    {% block content %}{% endblock %}
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul>
+    {% for message in messages %}
+        <li>{{ message }} </li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+  </body>
+</html>

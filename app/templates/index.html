@@ -1,0 +1,16 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+    <form action="" method="post" name="index">
+        {{ form.hidden_tag() }}
+        <p>
+            Please enter song lyrics:<br>
+            {{ form.lyrics() }}
+            {% for error in form.lyrics.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}<br>
+        
+        <p><input type="submit" value="Compute Title"></p>
+    </form>
+{% endblock %}
